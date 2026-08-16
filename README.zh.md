@@ -8,7 +8,7 @@ Start A Project Skills：我的项目阶段规范，结合 fail-fast DDD 多重�
 
 ideas → concepts → spec → experiments → structure & src → plan & acceptance
 
-为什么做、愿景是什么——见 [VISION.md](VISION.md)。
+为什么做、愿景是什么——见 [VISION.zh.md](VISION.zh.md)。
 
 ## 安装
 
