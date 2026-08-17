@@ -2,7 +2,7 @@
 
 English | [中文](README.zh.md)
 
-[![skills.sh](https://skills.sh/b/Etavioxy/sap-skills)](https://skills.sh/Etavioxy/sap-skills)
+[![skills.sh](https://img.shields.io/badge/skills.sh-sap--skills-8A2BE2)](https://www.skills.sh/skills/etavioxy/sap-skills)
 
 Start A Project Skills — my project-stage conventions with fail-fast DDD multi-checks.
 
