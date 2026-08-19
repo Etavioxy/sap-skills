@@ -9,6 +9,7 @@ description: 把 web 调研结果沉淀为 markdown 报告。触发词：整理�
 
 调研在进入本 skill 前完成：
 - 需要先做 web 调研 → 请 invoke [[mattpocock-skills:research]]
+- 搜索工具（WebSearch）不可用 → 请 invoke [[websearch-fallback]]
 
 ## 报告命名
 

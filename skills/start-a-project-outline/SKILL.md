@@ -21,7 +21,7 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 | experiments > validation | 已用 cases/caseenv 核对结果，生成可供展示给用户的内容，待出结论 | runner.* |
 | spec2 | 完整规格文档（随 src 阶段持续修订，不是一次定稿） | spec.md |
 | spec2 > structure | spec2 的模块结构/目录布局已定，随 src 微调 | spec.md |
-| spec2 > docs | 每个概念独立成文（docs/*.md），随 src 持续修订 | docs/*.md (for each concept) |
+| spec2 > docs | 实现层文档（docs/*.md），随 src 持续修订 | docs/*.md |
 | structure & src | 目录/模块结构已定，正在从实验代码迁移、跑通、强化、补文档 | spec.md |
 | structure & src > first runthrough | 实验代码迁移完，薄连接层已搭好，只组装不写逻辑，跑通一次 | — |
 | structure & src > elegant code | 对概念的代码设计模式优雅化：增加约束，提高抽象程度，减少耦合，可读可维护 | — |
@@ -36,7 +36,17 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 
 - **concept**（concepts.md）: ① 术语与概念定义，全系统唯一术语源 ② 概念间关系（覆盖矩阵） ③ 供各文档引用标号，不重复定义
 - **spec**（spec.md）: ① 技术决策 / 选型 ② 模块结构 + 目录布局 ③ 验收基线，随 src 修订
-- **docs/\*.md**（每概念一文件）: ① 概念明细，实现原则 ② 推导依据，怎么体现了实现的优雅和一致性 ③ 实现落点（不含详细业务代码），随 src 修订
+- **docs/\*.md**（实现层文档）: ① 概念明细，实现原则 ② 推导依据，怎么体现了实现的优雅和一致性 ③ 实现落点（不含详细业务代码），随 src 修订
+
+## 文档格式规范
+
+各文档的具体格式见对应 format 文件（写/改文档前先通读）：
+
+- `concepts.md` → [[concepts-format]]
+- `spec.md` → [[spec-format]]
+- `docs/concrete-insight.md` → [[concrete-insight-format]]
+- `docs/*.md` → [[docs-format]]
+- `experiments/index.md` + `cases.*` + `runner.*` → [[experiments-format]]
 
 ## 对抗收敛
 

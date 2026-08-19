@@ -45,6 +45,7 @@ Clone this repo, then use the script to install and manage all skills (Claude ex
 - [plan-analysis-matrix](skills/plan-analysis-matrix/SKILL.md) — compare options, focus on core pain points, pick a path
 - [report-from-websearch](skills/report-from-websearch/SKILL.md) — turn research material into an evidence-graded markdown report
 - [goals-gate-approver](skills/goals-gate-approver/SKILL.md) — manage evolving user constraints with a gate process
+- [elegant-code-analysis](skills/elegant-code-analysis/SKILL.md) — evaluate refactor options before changing code: blast radius, consistency, trade-offs
 
 ## License
 
