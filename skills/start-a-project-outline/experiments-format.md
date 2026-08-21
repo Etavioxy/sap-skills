@@ -41,7 +41,9 @@ experiments/DD-snake-case/     ← 一个实验
 ## cases.* — case 验收框架（代码文件）
 
 - 根据用户的需要（story），编写 case。
-- **cases**——代码文件，是可运行的验收。
+- `cases.*` ——代码文件，是可运行的验收，注意不是 `.md` 文档。
+- `cases.*` 是一个文件——所有 case 及其 action（script）写在这一个文件里，不拆成多个脚本文件。
+- 全部测试都要放在 `cases.*` 展示出来——直接用 cases 运行，不另建 `tests/` 目录或独立测试文件。
 
 ### caseenv（可选）
 
@@ -56,7 +58,7 @@ experiments/DD-snake-case/     ← 一个实验
 ```
 case <name> {
   type:     <case 类型>            // 不同类字段不同
-  story:    <story 背景>
+  story:    <story 背景>           // 必选，用自然语言全部概括
   action:   <执行被测能力的动作>     // 可选，调用 runner 提供的能力
   scene:    <场景构造>              // 可选，构造验证场景
   data:     { ... }                // runner 注入的输入数据，结构随 action 而定

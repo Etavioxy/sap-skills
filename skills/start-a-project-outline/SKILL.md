@@ -26,7 +26,7 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 | structure & src > first runthrough | 实验代码迁移完，薄连接层已搭好，只组装不写逻辑，跑通一次 | — |
 | structure & src > elegant code | 对概念的代码设计模式优雅化：增加约束，提高抽象程度，减少耦合，可读可维护 | — |
 | structure & src > reinforce | 测试框架和沙盒化正在补 | — |
-| structure & src > reinforce > test framework | 测试框架已搭好 | — |
+| structure & src > reinforce > test framework | 端到端、突变、回归等高级测试已搭好 | — |
 | structure & src > reinforce > sandboxing | 沙盒隔离已做 | — |
 | plan & acceptance | 基础实现已完成，正在定验收标准和测试计划，作为下一版本的起点 | — |
 
@@ -52,9 +52,9 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 
 相邻阶段会互相修正，允许早期产物被后期结果推翻：
 
-- concepts ↔ experiments：实验可以推翻或演化概念。
-- spec2/structure ↔ experiments：结构纳不下某个实验时，调整结构或调整实验，直到都能纳入。
-- structure/reinforce → experiments：实现卡住或达不到最优，回实验代码找答案；交付下限以实验结果为准，不能更差。
+- concepts/spec ↔ experiments：实验可以推翻或演化概念，影响规格决定的形成，概念/规格同时约束实验边界，避免无结论发散。
+- structure ↔ src：结构约束源码组织，源码实现中的真实约束会反推结构微调。
+- structure/reinforce → experiments：实现卡住或达不到最优，回实验代码重新迭代验证。
 
 ## 多agent协作
 
