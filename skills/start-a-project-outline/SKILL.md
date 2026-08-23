@@ -13,7 +13,7 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 | concepts | 核心概念已提出并对齐 | concepts.md |
 | spec1 | 只有基础的设计，只包含技术栈和初步 insight，初稿已产出 | spec.md |
 | spec1 > tech-stack | 技术选型已定，分工未定 | spec.md |
-| spec1 > concrete-insight | 每个核心概念的链路已用真实数据/图具体化，不写抽象描述 | docs/concrete-insight.md |
+| spec1 > concrete-insight | 数据从产生到消费的完整链路已用真实数据/图具体化 | docs/concrete-insight.md |
 | experiments | 已列 fail-fast 实验清单，正在验证 | experiments/index.md |
 | experiments > brainstorming | 实验清单已定，正在对比解法方案 | — |
 | experiments > story | 实验写成一条故事线（端到端场景），写并跑通，尚未用 cases 核对 | cases.* |
@@ -40,19 +40,20 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 
 ## 文档格式规范
 
-各文档的具体格式见对应 format 文件（写/改文档前先通读）：
+各文档的具体格式见对应 format 文件（与 SKILL.md 同级，写/改文档前先通读）：
 
-- `concepts.md` → [[concepts-format]]
-- `spec.md` → [[spec-format]]
-- `docs/concrete-insight.md` → [[concrete-insight-format]]
-- `docs/*.md` → [[docs-format]]
-- `experiments/index.md` + `cases.*` + `runner.*` → [[experiments-format]]
+- `concepts.md` → [`concepts-format.md`](./concepts-format.md)
+- `spec.md` → [`spec-format.md`](./spec-format.md)
+- `docs/concrete-insight.md` → [`concrete-insight-format.md`](./concrete-insight-format.md)
+- `docs/*.md` → [`docs-format.md`](./docs-format.md)
+- `experiments/index.md` + `cases.*` + `runner.*` → [`experiments-format.md`](./experiments-format.md)
 
 ## 对抗收敛
 
 相邻阶段会互相修正，允许早期产物被后期结果推翻：
 
-- concepts/spec ↔ experiments：实验可以推翻或演化概念，影响规格决定的形成，概念/规格同时约束实验边界，避免无结论发散。
+- concepts ↔ concrete-insight：真实数据/脚本形态具象概念时，暴露概念的缺漏或边界不清，反过来修订概念；修订后再回填 concrete-insight。
+- spec ↔ experiments：实验可以推翻或演化规格决定（技术选型等），规格同时约束实验边界，避免无结论发散。
 - structure ↔ src：结构约束源码组织，源码实现中的真实约束会反推结构微调。
 - structure/reinforce → experiments：实现卡住或达不到最优，回实验代码重新迭代验证。
 
