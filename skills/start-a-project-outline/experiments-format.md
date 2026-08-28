@@ -6,15 +6,16 @@ SAP experiments 阶段的三类产物：`experiments/index.md`（实验清单）
 
 根目录下创建 `experiments/` 文件夹。子文件夹格式：`DD-snake-case`（DD 为数字序号）。
 
-每个实验子文件夹内含：case 代码、caseenv 代码、runner 代码、结果记录（具体目录名/语言随项目）：
+每个实验是一个独立的 package（不依赖主仓库），随语言有自己的构建配置；代码文件可能在 `src/` 里，也可能直接在实验根目录。内含 case 代码、runner 代码、README.md：
 
 ```
 experiments/DD-snake-case/     ← 一个实验
-├── <case 代码>                ← 声明「什么成立」
-├── <caseenv 代码>             ← 可选，case 运行环境（需要多环境时才用）
+├── <case 代码>                ← 包含 case 和 caseenv
 ├── <runner 代码>              ← 驱动验证执行
-└── <结果记录>                 ← 实验结论
+└── README.md                  ← 实验设计和结论
 ```
+
+多个实验同处一个 git 仓库（monorepo）。
 
 ## experiments/index.md — 实验清单
 
@@ -59,9 +60,9 @@ experiments/DD-snake-case/     ← 一个实验
 case <name> {
   type:     <case 类型>            // 不同类字段不同
   story:    <story 背景>           // 必选，用自然语言全部概括
-  action:   <执行被测能力的动作>     // 可选，调用 runner 提供的能力
+  action:   <执行被测能力的动作序列> // 可选，通常为数组——调用 runner 提供的能力，按序执行
   scene:    <场景构造>              // 可选，构造验证场景
-  data:     { ... }                // runner 注入的输入数据，结构随 action 而定
+  data:     { ... }                // 一个序列化对象，runner 注入的输入数据，结构随 action 而定
   envs:     <caseenv 列表>         // 可选，此 case 适用的 caseenv
   expect:   <期望>                 // 可选，验证应成立的结果
   reason:   <说明>                 // 可选，case 的补充说明
@@ -69,10 +70,10 @@ case <name> {
 }
 ```
 
-## runner.* — 验证执行（代码文件）
+## runner.* — 验证执行（被 cases import 的函数库）
 
-`runner.*` 是**代码文件**，驱动 caseenv×case 的验证执行（experiments > validation 阶段产物）。作用：
+`runner.*` 是函数库（experiments > validation 阶段产物）。cases 会使用 runner 的能力。作用：
 
-1. **提供 case 的 action 所需能力**——case 的 action 调用 runner 提供的能力执行被测功能。
-2. **准备基础设施函数**——起/收环境、读执行日志、场景编排等。
-3. **执行验证**——逐个 case：起环境 → 构造场景 → 执行 action → 核对期望 → 收环境 → 输出报告；涉及多 caseenv 时按 case 的 `envs` 组合验证。
+1. **提供 case 的 action 所需能力**——runner 暴露能力函数，case 的 `action` 数组引用它们执行被测功能。
+2. **准备基础设施函数**——起/收环境（沙盒构造）、读执行日志、场景编排等。
+3. **执行验证**——runner 提供 `run_case`（构造场景 → 执行 action → 核对 expect）；涉及多 caseenv 时按 case 的 `envs` 组合验证。
