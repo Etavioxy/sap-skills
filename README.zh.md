@@ -45,6 +45,8 @@ npx skills remove sap-skills
 - [plan-analysis-matrix](skills/plan-analysis-matrix/SKILL.md) — 多方案梯度对比、核心痛点聚焦、推荐路径
 - [report-from-websearch](skills/report-from-websearch/SKILL.md) — 把调研素材沉淀为证据分级的 markdown 报告
 - [goals-gate-approver](skills/goals-gate-approver/SKILL.md) — 管理持续变化的用户约束并执行门禁
+- [elegant-code-analysis](skills/elegant-code-analysis/SKILL.md) — 改代码前评估候选方案：影响面、一致性、方案取舍
+- [name-full-semantics](skills/name-full-semantics/SKILL.md) — 符号命名写全归属与位置：这是哪个任务的哪一环
 
 ## License
 
