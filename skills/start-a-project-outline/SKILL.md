@@ -1,6 +1,6 @@
 ---
 name: start-a-project-outline
-description: SAP 是一个从想法到落地的推进流程框架。如果采用 SAP 框架，在这条线上做架构推进时，用此 Skill 判断当前在哪一阶段、下一步做什么。触发词：SAP文档、brainstorming、ideas & spec & experiments & cases。
+description: SAP 是一个从想法到落地的推进流程框架。如果采用 SAP 框架，在这条线上做架构推进时，用此 Skill 判断当前在哪一阶段、下一步做什么。触发词：SAP文档、brainstorming、ideas & spec & experiments & checks。
 ---
 
 # Start-A-Project Outline
@@ -16,9 +16,9 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 | spec1 > concrete-insight | 数据从产生到消费的完整链路已用真实数据/图具体化 | docs/concrete-insight.md |
 | experiments | 已列 fail-fast 实验清单，正在验证 | experiments/index.md |
 | experiments > brainstorming | 实验清单已定，正在对比解法方案 | — |
-| experiments > story | 实验写成一条故事线（端到端场景），写并跑通，尚未用 cases 核对 | cases.* |
-| experiments > cases | 建立 case 清单，用 cases/caseenv 逐项核对故事中的关键路径 | cases.* |
-| experiments > validation | 已用 cases/caseenv 核对结果，生成可供展示给用户的内容，待出结论 | runner.* |
+| experiments > proposition | 实验写成一条命题（端到端场景），写并跑通，尚未用验证产物核对 | README.md |
+| experiments > checks | 建立核对清单，用验证产物逐项核对命题中的关键路径 | 验证产物 |
+| experiments > validation | 已用验证产物核对结果，生成可供展示给用户的内容，待出结论 | 验证产物 |
 | spec2 | 完整规格文档（随 src 阶段持续修订，不是一次定稿） | spec.md |
 | spec2 > structure | spec2 的模块结构/目录布局已定，随 src 微调 | spec.md |
 | spec2 > docs | 实现层文档（docs/*.md），随 src 持续修订 | docs/*.md |
@@ -46,7 +46,7 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 - `spec.md` → [`spec-format.md`](./spec-format.md)
 - `docs/concrete-insight.md` → [`concrete-insight-format.md`](./concrete-insight-format.md)
 - `docs/*.md` → [`docs-format.md`](./docs-format.md)
-- `experiments/index.md` + `cases.*` + `runner.*` → [`experiments-format.md`](./experiments-format.md)
+- `experiments/`（README.md + 验证产物 + index.md）→ [`experiments-format.md`](./experiments-format.md)
 
 ## 对抗收敛
 
