@@ -38,6 +38,8 @@ npx skills remove sap-skills
 
 `report-from-websearch` 在需要 web 调研时引用 [mattpocock/skills](https://github.com/mattpocock/skills) 中的 research skill，不随本仓库分发。
 
+`auto-docs-driven-loop` 驱动 `tdd`、`code-review`，并引用 `resource-declare`；三者均不随本仓库分发。
+
 ## Skills
 
 - [start-a-project-outline](skills/start-a-project-outline/SKILL.md) — SAP 流程框架：判断项目当前阶段与下一步
@@ -47,6 +49,7 @@ npx skills remove sap-skills
 - [goals-gate-approver](skills/goals-gate-approver/SKILL.md) — 管理持续变化的用户约束并执行门禁
 - [elegant-code-analysis](skills/elegant-code-analysis/SKILL.md) — 改代码前评估候选方案：影响面、一致性、方案取舍
 - [name-full-semantics](skills/name-full-semantics/SKILL.md) — 符号命名写全归属与位置：这是哪个任务的哪一环
+- [auto-docs-driven-loop](skills/auto-docs-driven-loop/SKILL.md) — 以 plan 为唯一进度真源的实现推进循环：TDD 原子提交、review 收到无硬违反、多次 e2e
 
 ## License
 

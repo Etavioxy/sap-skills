@@ -38,6 +38,8 @@ Clone this repo, then use the script to install and manage all skills (Claude ex
 
 `report-from-websearch` references the research skill from [mattpocock/skills](https://github.com/mattpocock/skills) when web research is needed. It is not distributed with this repo.
 
+`auto-docs-driven-loop` drives `tdd` and `code-review` and references `resource-declare` for its resource section; none of them is distributed with this repo.
+
 ## Skills
 
 - [start-a-project-outline](skills/start-a-project-outline/SKILL.md) — SAP framework: know where a project is and what to do next
@@ -47,6 +49,7 @@ Clone this repo, then use the script to install and manage all skills (Claude ex
 - [goals-gate-approver](skills/goals-gate-approver/SKILL.md) — manage evolving user constraints with a gate process
 - [elegant-code-analysis](skills/elegant-code-analysis/SKILL.md) — evaluate refactor options before changing code: blast radius, consistency, trade-offs
 - [name-full-semantics](skills/name-full-semantics/SKILL.md) — symbol names state which task and which step they belong to
+- [auto-docs-driven-loop](skills/auto-docs-driven-loop/SKILL.md) — implementation loop with plan as the single source of progress: TDD atomic commits, review until no hard findings, repeated e2e
 
 ## License
 
