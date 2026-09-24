@@ -47,6 +47,7 @@ description: SAP 是一个从想法到落地的推进流程框架。如果采用
 - `docs/concrete-insight.md` → [`concrete-insight-format.md`](./concrete-insight-format.md)
 - `docs/*.md` → [`docs-format.md`](./docs-format.md)
 - `experiments/`（README.md + 验证产物 + index.md）→ [`experiments-format.md`](./experiments-format.md)
+- 端到端场景剧本（`<plan>-scenarios/DD-<kebab>.md`）→ [`scenario-format.md`](./scenario-format.md)
 
 ## 对抗收敛
 
